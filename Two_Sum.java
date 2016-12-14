@@ -17,9 +17,8 @@
  
  Solution:
  该题需要数组下标，所以不能排序处理
- 方法一O(n^2)：两重循环，暴力寻找并记录序号
+ 方法一O(n^2)：两层循环，暴力寻找并记录序号
  方法二O(n)：HashMap，key为原数组的值，mapping为原来的序号，然后寻找map中是否含有target - nums[i]（containsKey），找到则可以返回
- 
  
  */
 

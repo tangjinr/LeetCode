@@ -1,9 +1,33 @@
+/*
+ Author:     tangz, tangpersonal@163.com
+ Date:       Dec 13, 2014
+ Problem:    Happy Number
+ Difficulty: Easy
+ Source:     https://leetcode.com/problems/happy-number/
+ 
+ Describe:
+ 给定一个数，判断是否是Happy Number；Happy Number对每个数字求平方和，如果最后等于1，则是Happy Number；如果最后出现无限循环，则不是Happy Number
+ 
+ Example:
+ 19 is a happy number
+ 1^2 + 9^2 = 82
+ 8^2 + 2^2 = 68
+ 6^2 + 8^2 = 100
+ 1^2 + 0^2 + 0^2 = 1
+ 
+ Type:数论
+ 
+ Solution:
+ 多次求平方和，判断平方和是否为1，若是直接返回true；
+ 否则将平方和结果记录下来，若后面求得平方和已经在前面出现过，直接返回false（因为会无限循环下去）
+ 
+ */
+
 package com.tang.leetcode;
 
 import java.util.HashSet;
 import java.util.Set;
 
-/*title:Happy Number*/
 public class Happy_Number {
 
 	public static boolean isHappy(int n) {

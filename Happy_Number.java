@@ -40,7 +40,7 @@ public class Happy_Number {
 				sum += Math.pow(num * 1.0, 2.0);
 				n /= 10;
 			}
-			// 判断平方和是否为1,
+			// 判断平方和是否为1,若为1，直接返回true
 			if (sum == 1)
 				return true;
 			// 将sum赋值给n，进行下次检验

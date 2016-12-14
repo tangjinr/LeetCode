@@ -45,6 +45,7 @@ public class Happy_Number {
 				return true;
 			// 将sum赋值给n，进行下次检验
 			n = sum;
+			n = sum;
 		}
 		return false;
 	}

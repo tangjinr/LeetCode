@@ -1,4 +1,5 @@
 /*
+ 
  Author:     tangz, tangpersonal@163.com
  Date:       Dec 13, 2014
  Problem:    Two Sum
@@ -6,19 +7,19 @@
  Source:     https://leetcode.com/problems/two-sum/
  
  Describe:
- ÔÚÒ»Êı×éÖĞ£¬ÕÒ³öÁ½¸öÊıÖ®ºÍµÈÓÚtarget£¬Êä³öËüÃÇµÄĞòºÅ
+ åœ¨ä¸€æ•°ç»„ä¸­ï¼Œæ‰¾å‡ºä¸¤ä¸ªæ•°ä¹‹å’Œç­‰äºtargetï¼Œè¾“å‡ºå®ƒä»¬çš„åºå·
  
  Example:
  Given nums = [2, 7, 11, 15], target = 9,
  Because nums[0] + nums[1] = 2 + 7 = 9,
  return [0, 1].
  
- Type:Êı×é
+ Type:æ•°ç»„
  
  Solution:
- ¸ÃÌâĞèÒªÊı×éÏÂ±ê£¬ËùÒÔ²»ÄÜÅÅĞò´¦Àí
- ·½·¨Ò»O(n^2)£ºÁ½²ãÑ­»·£¬±©Á¦Ñ°ÕÒ²¢¼ÇÂ¼ĞòºÅ
- ·½·¨¶şO(n)£ºHashMap£¬keyÎªÔ­Êı×éµÄÖµ£¬mappingÎªÔ­À´µÄĞòºÅ£¬È»ºóÑ°ÕÒmapÖĞÊÇ·ñº¬ÓĞtarget - nums[i]£¨containsKey£©£¬ÕÒµ½Ôò¿ÉÒÔ·µ»Ø
+ è¯¥é¢˜éœ€è¦æ•°ç»„ä¸‹æ ‡ï¼Œæ‰€ä»¥ä¸èƒ½æ’åºå¤„ç†
+ æ–¹æ³•ä¸€O(n^2)ï¼šä¸¤å±‚å¾ªç¯ï¼Œæš´åŠ›å¯»æ‰¾å¹¶è®°å½•åºå·
+ æ–¹æ³•äºŒO(n)ï¼šHashMapï¼Œkeyä¸ºåŸæ•°ç»„çš„å€¼ï¼Œmappingä¸ºåŸæ¥çš„åºå·ï¼Œç„¶åå¯»æ‰¾mapä¸­æ˜¯å¦å«æœ‰target - nums[i]ï¼ˆcontainsKeyï¼‰ï¼Œæ‰¾åˆ°åˆ™å¯ä»¥è¿”å›
  
  */
 
@@ -33,7 +34,7 @@ public class Two_Sum {
 
 		int len = nums.length;
 
-		/* ±©Á¦£¬Ê±¼ä¸´ÔÓ¶ÈO(n^2) */
+		/* æš´åŠ›ï¼Œæ—¶é—´å¤æ‚åº¦O(n^2) */
 		// for (int i = 0; i < len; i++) {
 		// for (int j = i + 1; j < len; j++) {
 		// if (nums[i] + nums[j] == target) {
@@ -42,9 +43,9 @@ public class Two_Sum {
 		// }
 		// }
 
-		/* HashMap·½·¨:Ê±¼ä¸´ÔÓ¶ÈO(n) 
-		 * map.containsKeyÊ±¼ä¸´ÔÓ¶ÈO(1)
-		 * */
+		/*
+		 * HashMapæ–¹æ³•:æ—¶é—´å¤æ‚åº¦O(n) map.containsKeyæ—¶é—´å¤æ‚åº¦O(1)
+		 */
 		Map<Integer, Integer> map = new HashMap<>();
 		for (int i = 0; i < len; i++) {
 			map.put(nums[i], i);
@@ -52,7 +53,7 @@ public class Two_Sum {
 		for (int i = 0; i < len; i++) {
 			int complement = target - nums[i];
 			if (map.containsKey(complement) && map.get(complement) != i) {
-				return new int[] { i, map.get(complement) }; // Ö±½Ó·µ»ØÒ»¸öĞÂnewµÄ¶ÔÏó
+				return new int[] { i, map.get(complement) }; // ç›´æ¥è¿”å›ä¸€ä¸ªæ–°newçš„å¯¹è±¡
 			}
 		}
 

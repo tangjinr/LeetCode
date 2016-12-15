@@ -1,4 +1,5 @@
 /*
+ 
  Author:     tangz, tangpersonal@163.com
  Date:       Dec 13, 2014
  Problem:    Happy Number
@@ -6,7 +7,7 @@
  Source:     https://leetcode.com/problems/happy-number/
  
  Describe:
- ¸ø¶¨Ò»¸öÊı£¬ÅĞ¶ÏÊÇ·ñÊÇHappy Number£»Happy Number¶ÔÃ¿¸öÊı×ÖÇóÆ½·½ºÍ£¬Èç¹û×îºóµÈÓÚ1£¬ÔòÊÇHappy Number£»Èç¹û×îºó³öÏÖÎŞÏŞÑ­»·£¬Ôò²»ÊÇHappy Number
+ ç»™å®šä¸€ä¸ªæ•°ï¼Œåˆ¤æ–­æ˜¯å¦æ˜¯Happy Numberï¼›Happy Numberå¯¹æ¯ä¸ªæ•°å­—æ±‚å¹³æ–¹å’Œï¼Œå¦‚æœæœ€åç­‰äº1ï¼Œåˆ™æ˜¯Happy Numberï¼›å¦‚æœæœ€åå‡ºç°æ— é™å¾ªç¯ï¼Œåˆ™ä¸æ˜¯Happy Number
  
  Example:
  19 is a happy number
@@ -15,11 +16,11 @@
  6^2 + 8^2 = 100
  1^2 + 0^2 + 0^2 = 1
  
- Type:ÊıÂÛ
+ Type:æ•°è®º
  
  Solution:
- ¶à´ÎÇóÆ½·½ºÍ£¬ÅĞ¶ÏÆ½·½ºÍÊÇ·ñÎª1£¬ÈôÊÇÖ±½Ó·µ»Øtrue£»
- ·ñÔò½«Æ½·½ºÍ½á¹û¼ÇÂ¼ÏÂÀ´£¬ÈôºóÃæÇóµÃÆ½·½ºÍÒÑ¾­ÔÚÇ°Ãæ³öÏÖ¹ı£¬Ö±½Ó·µ»Øfalse£¨ÒòÎª»áÎŞÏŞÑ­»·ÏÂÈ¥£©
+ å¤šæ¬¡æ±‚å¹³æ–¹å’Œï¼Œåˆ¤æ–­å¹³æ–¹å’Œæ˜¯å¦ä¸º1ï¼Œè‹¥æ˜¯ç›´æ¥è¿”å›trueï¼›
+ å¦åˆ™å°†å¹³æ–¹å’Œç»“æœè®°å½•ä¸‹æ¥ï¼Œè‹¥åé¢æ±‚å¾—å¹³æ–¹å’Œå·²ç»åœ¨å‰é¢å‡ºç°è¿‡ï¼Œç›´æ¥è¿”å›falseï¼ˆå› ä¸ºä¼šæ— é™å¾ªç¯ä¸‹å»ï¼‰
  
  */
 
@@ -33,17 +34,17 @@ public class Happy_Number {
 	public static boolean isHappy(int n) {
 		Set<Integer> set = new HashSet<>();
 		while (set.add(n)) {
-			// sum¼ÆËã¸÷¸öÊı×ÖÆ½·½ºÍ
+			// sumè®¡ç®—å„ä¸ªæ•°å­—å¹³æ–¹å’Œ
 			int sum = 0;
 			while (n != 0) {
 				int num = n % 10;
 				sum += Math.pow(num * 1.0, 2.0);
 				n /= 10;
 			}
-			// ÅĞ¶ÏÆ½·½ºÍÊÇ·ñÎª1,ÈôÎª1£¬Ö±½Ó·µ»Øtrue
+			// åˆ¤æ–­å¹³æ–¹å’Œæ˜¯å¦ä¸º1,è‹¥ä¸º1ï¼Œç›´æ¥è¿”å›true
 			if (sum == 1)
 				return true;
-			// ½«sum¸³Öµ¸øn£¬½øĞĞÏÂ´Î¼ìÑé
+			// å°†sumèµ‹å€¼ç»™nï¼Œè¿›è¡Œä¸‹æ¬¡æ£€éªŒ
 			n = sum;
 		}
 		return false;

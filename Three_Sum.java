@@ -1,4 +1,5 @@
 /*
+ 
  Author:     tangz, tangpersonal@163.com
  Date:       Dec 13, 2014
  Problem:    3Sum
@@ -6,7 +7,7 @@
  Source:     https://leetcode.com/problems/3sum/
  
  Describe:
- ÔÚÒ»Êý×éÖÐ£¬ÕÒ³öÈý¸öÊýÖ®ºÍµÈÓÚ0£¨target£©£¬Êä³öÕâÈý¸öÊýa + b + c = 0
+ åœ¨ä¸€æ•°ç»„ä¸­ï¼Œæ‰¾å‡ºä¸‰ä¸ªæ•°ä¹‹å’Œç­‰äºŽ0ï¼ˆtargetï¼‰ï¼Œè¾“å‡ºè¿™ä¸‰ä¸ªæ•°a + b + c = 0
  
  Example:
  Given S = [-1, 0, 1, 2, -1, -4]
@@ -16,12 +17,12 @@
    [-1, -1, 2]
  ]
  
- Type:Êý×é
+ Type:æ•°ç»„
  
  Solution:
- ¸ÃÌâÖ»ÐèÒªÄÄ¼¸¸öÊý£¬Ôò¿ÉÏÈÅÅÐò£¬È»ºóÊ¹ÓÃ¼Ð±ÆÑ°ÕÒO£¨n£©
- ÏÈÈ·¶¨Ò»¸öi£¬Èý¸öÊýÍË»¯µ½Á½¸öÊýj,k£¬ÀûÓÃ¼Ð±ÆÑ°ÕÒÂú×ãÒªÇóµÄnums[i]+nums[j]+nums[k]=0£¬ÕâÀï»¹ÐèÒªÈ¥ÖØ
- »ùÓÚ´ËË¼Ïë£¬¿ÉÒÔÍÆ¹ãµ½k¸öÊýÖ®ºÍµÈÓÚtarget£¬Four_Sum.javaÖÐ½éÉÜ¾ßÌåË¼Ïë
+ è¯¥é¢˜åªéœ€è¦å“ªå‡ ä¸ªæ•°ï¼Œåˆ™å¯å…ˆæŽ’åºï¼Œç„¶åŽä½¿ç”¨å¤¹é€¼å¯»æ‰¾Oï¼ˆnï¼‰
+ å…ˆç¡®å®šä¸€ä¸ªiï¼Œä¸‰ä¸ªæ•°é€€åŒ–åˆ°ä¸¤ä¸ªæ•°j,kï¼Œåˆ©ç”¨å¤¹é€¼å¯»æ‰¾æ»¡è¶³è¦æ±‚çš„nums[i]+nums[j]+nums[k]=0ï¼Œè¿™é‡Œè¿˜éœ€è¦åŽ»é‡
+ åŸºäºŽæ­¤æ€æƒ³ï¼Œå¯ä»¥æŽ¨å¹¿åˆ°kä¸ªæ•°ä¹‹å’Œç­‰äºŽtargetï¼ŒFour_Sum.javaä¸­ä»‹ç»å…·ä½“æ€æƒ³
  
  */
 
@@ -44,7 +45,7 @@ public class Three_Sum {
 			if (i > 0 && nums[i] == nums[i - 1])
 				continue;
 			int j = i + 1, k = len - 1;
-			// ¼Ð±ÆÑ°ÕÒÁ½¸öÊýÖ®ºÍ
+			// å¤¹é€¼å¯»æ‰¾ä¸¤ä¸ªæ•°ä¹‹å’Œ
 			while (j < k) {
 				int a = nums[i];
 				int b = nums[j];
@@ -55,12 +56,12 @@ public class Three_Sum {
 					// enumList.add(b);
 					// enumList.add(c);
 					// resultList.add(enumList);
-					resultList.add(Arrays.asList(a, b, c));// Arrays.asList·µ»ØArraysµÄÒ»¸öÄÚ²¿Àà
+					resultList.add(Arrays.asList(a, b, c));// Arrays.asListè¿”å›žArraysçš„ä¸€ä¸ªå†…éƒ¨ç±»
 					j++;
 					k--;
-					while (nums[j] == nums[j - 1] && j < k) // Ïû³ýÖØ¸´µÄÔªËØ
+					while (nums[j] == nums[j - 1] && j < k) // æ¶ˆé™¤é‡å¤çš„å…ƒç´ 
 						j++;
-					while (nums[k] == nums[k + 1] && j < k) // Ïû³ýÖØ¸´µÄÔªËØ
+					while (nums[k] == nums[k + 1] && j < k) // æ¶ˆé™¤é‡å¤çš„å…ƒç´ 
 						k--;
 				} else if (a + b + c > 0) {
 					k--;

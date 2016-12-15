@@ -1,4 +1,5 @@
 /*
+
  Author:     tangz, tangpersonal@163.com
  Date:       Dec 13, 2014
  Problem:    4Sum
@@ -6,7 +7,7 @@
  Source:     https://leetcode.com/problems/4sum/
  
  Describe:
- ÔÚÒ»Êý×éÖÐ£¬ÕÒ³öËÄ¸öÊýÖ®ºÍµÈÓÚtarget£¬Êä³öÕâÈý¸öÊýa + b + c + d = target
+ åœ¨ä¸€æ•°ç»„ä¸­ï¼Œæ‰¾å‡ºå››ä¸ªæ•°ä¹‹å’Œç­‰äºŽtargetï¼Œè¾“å‡ºè¿™ä¸‰ä¸ªæ•°a + b + c + d = target
  
  Example:
  Given S = [1, 0, -1, 0, -2, 2], and target = 0.
@@ -17,16 +18,16 @@
    [-2,  0, 0, 2]
  ]
  
- Type:Êý×é
+ Type:æ•°ç»„
  
  Solution:
- Í¬3Sum£¬ÏÈÅÅÐò£¬È»ºóÍË»¯µ½Á½¸öÊýÖ®ºÍ£¬ÀûÓÃ¼Ð±ÆÑ°ÕÒÂú×ãÒªÇóµÄnums[i]+nums[j]+nums[k]+nums[l]=target£¬ÐèÒªÈ¥ÖØ
- ÕâÀï½éÉÜk¸öÊýÖ®ºÍµÈÓÚtarget¾ßÌåË¼Ïë£º
- ·½·¨Ò»O(N^K)£º ±©Á¦£¬¾ÍÊÇÃ¶¾ÙËùÓÐµÄK-subset
- ·½·¨¶þO(n^(K-1))£º
- »ùÓÚÅÅÐò£¬ÒÔ¼°»ùÓÚ¼Ð±ÆÇóÁ½¸öÊýÖ®ºÍ£¨O(NlogN)£©µÄ»ù´¡
- È»ºó¿¼ÂÇ£¬ÏÈÈ·¶¨Ò»¸öÊý£¬ÔÙÔÚÊ£ÏÂµÄÊý×ÖÖÐÕÒµ½Ê£ÏÂµÄk-1¸öÊý£¬Ê¹ËûÃÇÖ®ºÍµÈÓÚtarget ¨C ÄÇ¸öÈ¡³öµÄÊý
- k-1¸öÊýÓÖ¿ÉÍË»¯µ½Çók-2¸öÊý£¬ÒÔ´ËÀàÍÆ£¬×îºóÖ»ÐèÒªÇóµÃ2¸öÊýÖ®ºÍ
+ åŒ3Sumï¼Œå…ˆæŽ’åºï¼Œç„¶åŽé€€åŒ–åˆ°ä¸¤ä¸ªæ•°ä¹‹å’Œï¼Œåˆ©ç”¨å¤¹é€¼å¯»æ‰¾æ»¡è¶³è¦æ±‚çš„nums[i]+nums[j]+nums[k]+nums[l]=targetï¼Œéœ€è¦åŽ»é‡
+ è¿™é‡Œä»‹ç»kä¸ªæ•°ä¹‹å’Œç­‰äºŽtargetå…·ä½“æ€æƒ³ï¼š
+ æ–¹æ³•ä¸€O(N^K)ï¼š æš´åŠ›ï¼Œå°±æ˜¯æžšä¸¾æ‰€æœ‰çš„K-subset
+ æ–¹æ³•äºŒO(n^(K-1))ï¼š
+ åŸºäºŽæŽ’åºï¼Œä»¥åŠåŸºäºŽå¤¹é€¼æ±‚ä¸¤ä¸ªæ•°ä¹‹å’Œï¼ˆO(NlogN)ï¼‰çš„åŸºç¡€
+ ç„¶åŽè€ƒè™‘ï¼Œå…ˆç¡®å®šä¸€ä¸ªæ•°ï¼Œå†åœ¨å‰©ä¸‹çš„æ•°å­—ä¸­æ‰¾åˆ°å‰©ä¸‹çš„k-1ä¸ªæ•°ï¼Œä½¿ä»–ä»¬ä¹‹å’Œç­‰äºŽï¼ˆtarget â€“ é‚£ä¸ªç¡®å®šçš„æ•°ï¼‰
+ k-1ä¸ªæ•°åˆå¯é€€åŒ–åˆ°æ±‚k-2ä¸ªæ•°ï¼Œä»¥æ­¤ç±»æŽ¨ï¼Œæœ€åŽåªéœ€è¦æ±‚å¾—2ä¸ªæ•°ä¹‹å’Œ
  
  */
 

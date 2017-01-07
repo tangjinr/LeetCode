@@ -1,7 +1,7 @@
 /*
  
  Author:     tangz, tangpersonal@163.com
- Date:       Dec 13, 2014
+ Date:       Dec 13, 2016
  Problem:    3Sum
  Difficulty: Medium
  Source:     https://leetcode.com/problems/3sum/

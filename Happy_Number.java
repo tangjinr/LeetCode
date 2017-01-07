@@ -1,7 +1,7 @@
 /*
  
  Author:     tangz, tangpersonal@163.com
- Date:       Dec 13, 2014
+ Date:       Dec 13, 2016
  Problem:    Happy Number
  Difficulty: Easy
  Source:     https://leetcode.com/problems/happy-number/
@@ -32,8 +32,8 @@ import java.util.Set;
 public class Happy_Number {
 
 	public static boolean isHappy(int n) {
-		Set<Integer> set = new HashSet<>();
-		while (set.add(n)) {
+		Set<Integer> set = new HashSet<>();// 利用Set的性质
+		while (set.add(n)) {// 不能添加则说明集合里已存在该元素
 			// sum计算各个数字平方和
 			int sum = 0;
 			while (n != 0) {

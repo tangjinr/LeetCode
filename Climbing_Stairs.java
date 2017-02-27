@@ -30,8 +30,8 @@ package com.tang.leetcode;
 public class Climbing_Stairs {
 
 	public static int climbStairs(int n) {
-		int preNumDistinctWays = 0;
-		int distinctWays = 1;
+		int preNumDistinctWays = 0; // 前一梯的方法数
+		int distinctWays = 1;  // 求的总方法数
 		for (int i = 1; i <= n; i++) {
 			int temp = distinctWays;
 			distinctWays += preNumDistinctWays;

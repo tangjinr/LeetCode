@@ -51,7 +51,7 @@ public class Happy_Number {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(isHappy(1));
+		System.out.println(isHappy(22));
 	}
 
 }

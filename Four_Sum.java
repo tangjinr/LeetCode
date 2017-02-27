@@ -5,10 +5,10 @@
  Problem:    4Sum
  Difficulty: Medium
  Source:     https://leetcode.com/problems/4sum/
- 
+
  Describe:
  在一数组中，找出四个数之和等于target，输出这三个数a + b + c + d = target
- 
+
  Example:
  Given S = [1, 0, -1, 0, -2, 2], and target = 0.
  A solution set is:
@@ -17,9 +17,9 @@
    [-2, -1, 1, 2],
    [-2,  0, 0, 2]
  ]
- 
+
  Type:数组
- 
+
  Solution:
  同3Sum，先排序，然后退化到两个数之和，利用夹逼寻找满足要求的nums[i]+nums[j]+nums[k]+nums[l]=target，需要去重
  这里介绍k个数之和等于target具体思想：
@@ -28,7 +28,7 @@
  基于排序，以及基于夹逼求两个数之和（O(NlogN)）的基础
  然后考虑，先确定一个数，再在剩下的数字中找到剩下的k-1个数，使他们之和等于（target – 那个确定的数）
  k-1个数又可退化到求k-2个数，以此类推，最后只需要求得2个数之和
- 
+
  */
 
 package com.tang.leetcode;
@@ -78,7 +78,6 @@ public class Four_Sum {
 				}
 			}
 		}
-
 		// System.out.println(resultList);
 		return resultList;
 

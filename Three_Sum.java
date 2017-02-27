@@ -1,14 +1,14 @@
 /*
- 
- Author:     tangz, tangpersonal@163.com
- Date:       Dec 13, 2016
+
+ Author: 	 tangz, tangpersonal@163.com
+ Date: 		 Dec 13, 2016
  Problem:    3Sum
  Difficulty: Medium
  Source:     https://leetcode.com/problems/3sum/
- 
+
  Describe:
  在一数组中，找出三个数之和等于0（target），输出这三个数a + b + c = 0
- 
+
  Example:
  Given S = [-1, 0, 1, 2, -1, -4]
  A solution set is:
@@ -16,14 +16,14 @@
    [-1, 0, 1],
    [-1, -1, 2]
  ]
- 
+
  Type:数组
- 
+
  Solution:
  该题只需要哪几个数，则可先排序，然后使用夹逼寻找O（n）
  先确定一个i，三个数退化到两个数j,k，利用夹逼寻找满足要求的nums[i]+nums[j]+nums[k]=0，这里还需要去重
  基于此思想，可以推广到k个数之和等于target，Four_Sum.java中介绍具体思想
- 
+
  */
 
 package com.tang.leetcode;
@@ -43,7 +43,7 @@ public class Three_Sum {
 
 		for (int i = 0; i < len; i++) {
 			if (i > 0 && nums[i] == nums[i - 1])
-				continue;
+				continue;// 避免重复
 			int j = i + 1, k = len - 1;
 			// 夹逼寻找两个数之和
 			while (j < k) {
@@ -76,7 +76,6 @@ public class Three_Sum {
 		}
 
 		// System.out.println(resultList);
-
 		return resultList;
 	}
 

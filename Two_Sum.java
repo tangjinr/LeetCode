@@ -53,7 +53,7 @@ public class Two_Sum {
 		for (int i = 0; i < len; i++) {
 			int complement = target - nums[i];
 			if (map.containsKey(complement) && map.get(complement) != i) {
-				return new int[] { i, map.get(complement) }; // 直接返回一个新new的对象
+				return new int[] { i, map.get(complement) }; // 直接返回一个新new的对象(匿名对象)
 			}
 		}
 

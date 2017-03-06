@@ -23,7 +23,7 @@
  
  网上较好的解答技巧：
  比较后一个元素和新数组（nums[lengthDeletedArray - 1]）中的前一个元素是否不等：nums[i] != nums[lengthDeletedArray - 1]
- 
+ 这样有利于：若题目要求每个元素最多可出现两次或者k次，就可以与nums[lengthDeletedArray - k]比较。因为这里很有可能nums[i - k]已经变了，被更新了
  */
 
 package com.tang.leetcode;

@@ -56,17 +56,17 @@ public class Plus_One {
     }
 
     private static int[] add(int[] digits, int addNum) {
-        int digitsLength = digits.length;
+        int digitsLength = digits.length; // 原数组长度
         int tempAddNum = addNum, i = digitsLength - 1;
-        while (tempAddNum != 0 && i >= 0) {
+        while (tempAddNum != 0 && i >= 0) { // 需要添加的数等于0或者i<0，都需要退出while循环
             digits[i] += tempAddNum;
             tempAddNum = digits[i] / 10;
             digits[i] %= 10;
             i--;
         }
-        if (tempAddNum != 0) {
+        if (tempAddNum != 0) { // 若是由于i<0而退出while循环，则需要在数组最前面加个元素tempAddNum
             int[] tempDigits = new int[digitsLength + 1];
-            System.arraycopy(digits, 0, tempDigits, 1, digitsLength);
+            System.arraycopy(digits, 0, tempDigits, 1, digitsLength); // 复制数组
             tempDigits[0] = tempAddNum;
             return tempDigits;
         }

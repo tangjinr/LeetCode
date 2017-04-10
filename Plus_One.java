@@ -24,6 +24,7 @@
  若加完之后的digits[i]大于等于10，则tempAddNum = 1或者更大的数，此时继续操作digits的下一个数字
  3、然后这里还需要对digits[i] %= 10;操作
  4、回到第1步
+ 5、若最后检验完digits[0]，tempAddNum依然大于0，则需要在数组最前面加个元素tempAddNum：这里进行数组复制，然后tempDigits[0] = tempAddNum;
 
  网上很简单的方法:该方法只能处理加1操作
  public int[] plusOne(int[] digits) {
@@ -74,8 +75,8 @@ public class Plus_One {
 
     public static void main(String[] args) {
         int[] ans = plusOne(new int[]{0});
-        for (int i = 0; i < ans.length; i++) {
-            System.out.print(ans[i]);
+        for (int x : ans) {
+            System.out.print(x);
         }
     }
 }

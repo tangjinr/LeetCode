@@ -38,9 +38,9 @@ public class Ugly_Number {
 
     public static boolean isUgly(int num) {
         if (num == 0) return false;
-        while (num % 2 == 0) num /= 2;
-        while (num % 3 == 0) num /= 3;
-        while (num % 5 == 0) num /= 5;
+        while (num % 2 == 0) num /= 2;  // 消除所有2因子
+        while (num % 3 == 0) num /= 3;  // 消除所有3因子
+        while (num % 5 == 0) num /= 5;  // 消除所有5因子
         return num == 1;
     }
 

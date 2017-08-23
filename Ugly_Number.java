@@ -10,9 +10,9 @@
  给定一个数，判断是否是Ugly Number；Ugly Number它的因子只有1,2,3,5(因此1也是Ugly Number)。
 
  Example:
- 6 is a happy number
+ 6 is a Ugly Number
  6 = 2 * 3
- 14 is not a happy number
+ 14 is not a Ugly Number
  14 = 2 * 7
 
  Type:数论
